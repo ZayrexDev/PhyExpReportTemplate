@@ -1,0 +1,161 @@
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{float}
+
+\geometry{a4paper}
+\geometry{hcentering} 
+\geometry{left = 3.18 cm, right = 3.18 cm, top = 2.54 cm, bottom = 2.54 cm}
+
+\pagestyle{plain}
+
+\begin{document}
+
+\ctexset{
+	section={
+	  format=\heiti\raggedright\zihao{-4}
+	 },
+	subsection={
+			format=\heiti\zihao{5}
+		}
+}
+
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+\includegraphics[width=8.18cm]{img/tj.jpg} \\
+{\large\textbf{TONGJI UNIVERSITY}} \\[1cm]
+{\Huge\textbf{物理实验报告}} \\[5cm]
+{
+    \bfseries\LARGE
+    \begin{tabular}{r p{10cm}<{\centering}}
+        实验名称 & XXXXXXXXXXX \\ \cline{2-2}
+        学生姓名 & XXXX \\ \cline{2-2}
+        学　　号 & XXXXXXX \\ \cline{2-2}
+        组　　号 & XX \\ \cline{2-2}
+        实验日期 & 20XX-XX-XX \\ \cline{2-2}
+        ~&~
+    \end{tabular}
+}
+\vfill
+\end{titlepage}
+
+\begin{center}
+	\LARGE\textbf{实验名称}
+\end{center}
+\section{实验目的}
+\begin{itemize}
+	\item AAAAAAA；
+	\item BBBBBBB；
+	\item CCCCCCC。
+\end{itemize}
+\section{实验原理}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+\section{实验仪器}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+\section{实验内容}
+\subsection{内容1}
+\begin{enumerate}
+	\item Lorem ipsum dolor sit amet
+	\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+	\item Excepteur sint occaecat cupidatat non proident
+\end{enumerate}
+\section{数据记录处理}
+\subsection{处理1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+\subsection{处理2}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\section{讨论与分析}
+\begin{enumerate}
+	\item Lorem ipsum dolor sit amet\\ {
+	      	Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+			sed do eiusmod tempor incididunt ut labore et dolore magna 
+			aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+			ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	      }
+	\item Lorem ipsum dolor sit amet\\ {
+	      	Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+			sed do eiusmod tempor incididunt ut labore et dolore magna 
+			aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+			ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	      }
+\end{enumerate}
+
+\newpage
+{
+	\centering
+	\includegraphics[width=16cm]{img/tj.jpg} % 报告照片
+}
+
+% ==============================================
+% ==============================================
+% ==============================================
+\section{示例}
+\subsection{排版}
+标题大小：
+\verb|\section{} > \subsection{} > \subsubsection{}|
+\subsection{列表}
+\begin{enumerate}
+	\item 使用enumerate环境创建有序列表；
+	\item 使用item创建列表项。
+\end{enumerate}
+\begin{itemize}
+	\item 使用itemize环境创建无序列表；
+	\item 使用item创建列表项。
+\end{itemize}
+\subsection{公式}
+使用equation环境创建公式，使用label指令添加引用标签，使用ref指令创建引用。
+\begin{equation}
+	\frac{\mathrm{d}^2x}{\mathrm{d}t^2} + \frac{\pi{}^2r^4P\gamma{}}{mV}x = 0 \label{e6}
+\end{equation}
+使用\$包裹公式创建行间公式，$E=mc^2$
+\subsection{一堆公式}
+使用align环境创建。使用\&来指明对齐，使用$\backslash{}\backslash{}$换行。
+\begin{align*}
+	U_{TA} & = \sqrt{\frac{\Sigma(T_i-\bar{T})^2}{n(n-1)}} = 0.0001s &
+	U_{TB} & = \frac{0.1}{100}s = 0.0010s                              \\
+	U_T    & = \sqrt{U_{TA}^2 + U_{TB}^2} = 0.0010s                  &
+	U_{rT} & = \frac{U_T}{\bar{T}} \times 100\% = 0.18\%               \\
+	T      & = 0.5628(10)s
+\end{align*}
+\subsection{表格}
+使用table环境创建表格。建议使用在线工具编辑表格。
+\begin{table}[H]
+	\centering
+	\caption{小球直径测量数据记录表(单位:mm)}
+	\begin{tabular}{ccccccc}
+		\toprule
+		测量序号  & 1      & 2      & 3      & 4      & 5      & 平均值    \\
+		\midrule
+		初读数   & 0      & 0      & 0      & 0      & 0      & -      \\
+		末读数   & 14.000 & 13.996 & 14.005 & 14.003 & 13.998 & -      \\
+		直径$d$ & 14.000 & 13.996 & 14.005 & 14.003 & 13.998 & 14.000 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\subsection{图片}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{img/tj.jpg}
+	\caption{图片标题}
+	\label{f1}
+\end{figure}
+使用figure环境插入图片。调整width的值以调整大小。
+使用label指令添加引用标签。使用ref指令创建引用。
+\end{document}
